@@ -13,6 +13,7 @@ const getData = async (url) => {
   const response = await fetch(url, {
     headers: {
       'X-Api-Key': API_KEY,
+      'Content-Type': 'application/json'
     }
   });
   const data = await response.json();
