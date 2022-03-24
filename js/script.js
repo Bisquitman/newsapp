@@ -11,7 +11,6 @@ const choices = new Choices(selectElem, {
 
 const getData = async (url) => {
   const response = await fetch(url, {
-    mode: 'same-origin',
     headers: {
       'X-Api-Key': API_KEY,
     }
