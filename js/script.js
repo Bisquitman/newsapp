@@ -10,11 +10,7 @@ const choices = new Choices(selectElem, {
 });
 
 const getData = async (url) => {
-  const response = await fetch(url, {
-    headers: {
-      'X-Api-Key': API_KEY,
-    }
-  });
+  const response = await fetch(url);
   const data = await response.json();
   return data;
 };
@@ -56,7 +52,7 @@ const renderCard = (data) => {
 };
 
 const loadNews = async () => {
-  const data = await getData('https://newsapi.org/v2/top-headlines?country=ru&language=ru');
+  const data = await getData(`https://newsapi.org/v2/top-headlines?country=ru&language=ru&apiKey=${API_KEY}`);
   renderCard(data.articles);
 };
 
