@@ -219,6 +219,27 @@ a:hover {
   color: #09E079;
 }
 
+/* Preloader */
+.preload {
+  background-image: url(../img/preloader.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+  width: 180px;
+  height: 180px;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* --------- */
+
+/* Адаптив */
+
 @media(max-width:767.98px) {
   .flex-center {
     flex-wrap: wrap;
@@ -249,12 +270,4 @@ a:hover {
     grid-column: 1/3;
     order: 1;
   }
-
-  /* .footer__logo {
-    justify-self: center;
-  } */
-
-  /* .social__list {
-    justify-self: center;
-  } */
 }
